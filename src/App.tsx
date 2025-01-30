@@ -1,4 +1,4 @@
-import ToastContainer from "./components/ToastContainer";
+import ToastContainer from "./components/toast-notifications/ToastContainer";
 import "./styles.css";
 
 export default function App() {

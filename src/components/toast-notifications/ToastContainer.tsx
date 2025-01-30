@@ -1,10 +1,15 @@
-import { useState } from "react";
-import { useRef } from "react";
+import { useState, useRef } from "react";
+
+interface ToastType {
+  toastId: number;
+  message: string;
+  type: "success" | "info" | "warning" | "error";
+}
 
 export default function ToastContainer() {
-  const [toasts, setToasts] = useState([]);
-  const timerRef = useRef({});
-  const handleClose = (toastId) => {
+  const [toasts, setToasts] = useState<ToastType[]>([]);
+  const timerRef = useRef<Record<number, NodeJS.Timeout>>({});
+  const handleClose = (toastId: number) => {
     clearTimeout(timerRef.current[toastId]);
     setToasts((prevToasts) => {
       return prevToasts.filter((toast) => {
@@ -12,7 +17,7 @@ export default function ToastContainer() {
       });
     });
   };
-  const handleAdd = (message, type) => {
+  const handleAdd = (message: string, type: ToastType["type"]) => {
     const toastId = new Date().getTime();
     setToasts([...toasts, { toastId, message, type }]);
     timerRef.current[toastId] = setTimeout(() => handleClose(toastId), 5000);
