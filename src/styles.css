@@ -71,3 +71,11 @@
   color: black;
   border: 1px solid black;
 }
+
+.otp-container {
+  input {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
+  }
+}
