@@ -1,3 +1,4 @@
+import ImageCarousel from "./components/image-carousel/ImageCarousel";
 import OtpHandler from "./components/otp/Otp";
 import ImageContainer from "./components/pagination/ImageContainer";
 import ToastContainer from "./components/toast-notifications/ToastContainer";
@@ -9,6 +10,7 @@ export default function App() {
       <ToastContainer />
       <ImageContainer />
       <OtpHandler />
+      <ImageCarousel />
     </div>
   );
 }

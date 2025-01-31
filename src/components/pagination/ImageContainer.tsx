@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 
-interface DataType {
+export interface DataType {
   author: string;
   download_url: string;
   height: number;

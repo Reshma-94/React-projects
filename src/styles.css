@@ -79,3 +79,28 @@
     margin: 0.5rem;
   }
 }
+
+.carousel-container {
+  position: relative;
+  img {
+    height: 80vh;
+    width: 100%;
+  }
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  background-color: yellow;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 1rem;
+}
+
+.next-btn {
+  right: 1rem;
+}
